@@ -5,7 +5,6 @@ int main(void)
     int dx;
     int dy;
     int dz;
-    int numero;
 
     printf("Inserta la dimension de su matriz en las filas\n");
     scanf("%d", &dx);
@@ -26,23 +25,27 @@ int main(void)
         }
     }
 
-    // Se generan numeros aleatorios del 0 al 100 y se va rellenando la matriz
+    for (int j = 0; j < dy; j++)
+    {
+        for (int k = 0; k < dz; k++)
+        {
+            matrix[dx - 1][j][k] = 1;
+        }
+    }
 
     printf(" \n");
-    printf("La matriz original es:\n");
-    
+    printf("La matriz es:\n");
+
     for (int i = 0; i < dx; i++)
     {
         for (int j = 0; j < dy; j++)
         {
             for (int k = 0; k < dz; k++)
             {
-                printf ("%d", matrix[i][j][k] =0);
+                printf("%d", matrix[i][j][k]);
             }
             printf("\n");
         }
         printf("\n");
     }
-
-    return 0;
 }
